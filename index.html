@@ -1,0 +1,44 @@
+---
+layout: base
+title: Bella's Notes
+---
+
+<section class="hero is-light is-medium">
+  <div class="hero-body">
+    <div class="container">    	
+	      <div class="has-text-centered">
+		      <p class="title is-1">
+		        Selected Article to your inbox weekly
+		      </p>
+	  	  </div>
+	  
+	      <div class="">
+	      	<div class="field has-addons is-centered">
+			  <div class="control">
+			    <input class="input is-medium" type="text" placeholder="Enter your email">
+			  </div>
+			  <div class="control">
+			    <a class="button is-medium is-primary">
+			      Subscribe
+			    </a>
+			  </div>
+			</div>
+			<div class="field is-centered">
+				<button class="button is-medium has-background-grey-light">Nhận tin qua Zalo</button>
+			</div>	
+	      </div>
+		     
+    </div>
+  </div>
+</section>
+
+<section class="section">
+	<div class="container">
+		{% for post in site.posts %}
+		    <div>
+		      <h2 class="title is-2"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+		      <div class="content">{{ post.excerpt }}</div>
+		    </div>
+		{% endfor %}
+	</div>
+</section>
