@@ -1,6 +1,13 @@
 $primary: rgb(231, 81, 59);
 $light: rgb(245, 244, 242);
 $black: rgb(112, 108, 100);
+
+
+@import url('https://fonts.googleapis.com/css?family=Palanquin+Dark|Ubuntu&display=swap');
+$family-title-sans-serif: 'Palanquin Dark',Helvetica,Arial,sans-serif;
+$family-sans-serif: 'Ubuntu',Helvetica,Arial,sans-serif;
+$family-primary: $family-sans-serif;
+
 @import "bulma/sass/utilities/_all.sass";
 @import "bulma/sass/base/_all.sass";
 @import "bulma/sass/grid/columns.sass";
@@ -11,6 +18,15 @@ $black: rgb(112, 108, 100);
 @import "bulma/sass/elements/title.sass";
 @import "bulma/sass/elements/form.sass";
 @import "bulma/sass/elements/button.sass";
+
+body {
+	font-size: 1.2rem;
+}
+
+.title {
+	font-family: $family-title-sans-serif;
+	font-weight: 400;
+}
 
 .bl-border-bottom {
 	border-bottom: 1px solid rgb(229, 227, 221);
