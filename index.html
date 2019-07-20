@@ -1,6 +1,6 @@
 ---
 layout: base
-title: Bella's Notes
+title: site.title
 ---
 
 <section class="hero is-light is-medium">
@@ -14,35 +14,40 @@ title: Bella's Notes
 </section>
 
 <section class="section">
-	<div class="container">
+
 		<div class="columns">
 			<div class="column is-one-quarter">
 			</div>
 			<div class="column">
-				<h1 class="title is-3">In a nutshell, we help you accelerate your digital aspirations.</h1>
+				<h1 class="title is-2">In a nutshell, we help you accelerate your digital aspirations.</h1>
 				<div class="is-size-5">
 					We build and develop software products.
 We guide organisations on their digital transformation.
 We teach the skills needed for an internal digital capability.
 				</div>
+				
 			</div>
 		</div>
-	</div>
-</section>
-<section class="section">
-	<div class="container">
+		<div class="columns">
+			<div class="column is-one-quarter">
+			</div>
+			<div class="column">
+				Learn More About Us
+			</div>
+		</div>
+	
 		<div class="columns">
 			<div class="column is-one-quarter">
 				Offerings
 			</div>
 			<div class="column">
-				<h1 class="title is-4">Guide</h1>
+				<h1 class="title is-3">Guide</h1>
 				<div>
 					We bring together expertise across three areas that we see as key to making digital transformation happen: Digital and product management expertise, technology advice and design and implementation of the digital organisation.
 				</div>
 			</div>
 			<div class="column">
-				<h1 class="title is-4">Build</h1>
+				<h1 class="title is-3">Build</h1>
 				<div>
 					We build and develop software products.
 We guide organisations on their digital transformation.
@@ -50,7 +55,7 @@ We teach the skills needed for an internal digital capability.
 				</div>
 			</div>
 			<div class="column">
-				<h1 class="title is-4">Teach</h1>
+				<h1 class="title is-3">Teach</h1>
 				<div>
 					We build and develop software products.
 We guide organisations on their digital transformation.
@@ -58,15 +63,39 @@ We teach the skills needed for an internal digital capability.
 				</div>
 			</div>
 		</div>
+		<div class="columns">
+			<div class="column is-one-quarter">
+			</div>
+			<div class="column">
+				View our products
+			</div>
+		</div>
 	</div>
 </section>
+
+<section class="hero is-light is-medium">
+  <div class="hero-body">
+    <div class="container">    	
+	      <div class="has-text-centered">
+		      Some pitching here
+	  	  </div>
+    </div>
+  </div>
+</section>
+
 <section class="section">
 	<div class="container">
-		{% for post in site.posts %}
-		    <div>
-		      <h2 class="title is-2"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+		<div class="columns">
+			<div class="column is-one-quarter">
+				Latest News
+			</div>
+			{% for post in site.posts limit:2 %}
+		    <div class="column">
+		      <h2 class="title is-3"><a href="{{ post.url }}">{{ post.title }}</a></h2>
 		      <div class="content">{{ post.excerpt }}</div>
 		    </div>
-		{% endfor %}
+			{% endfor %}
+		</div>
+		
 	</div>
 </section>
