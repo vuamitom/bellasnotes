@@ -1,6 +1,9 @@
 $primary: rgb(231, 81, 59);
 $light: rgb(245, 244, 242);
 $black: rgb(112, 108, 100);
+$blue: #2897ff;
+$red: #ff323c;
+$dark: #323232;
 
 
 @import url('https://fonts.googleapis.com/css?family=Palanquin+Dark|Ubuntu&display=swap');
@@ -31,4 +34,35 @@ $family-primary: $family-sans-serif;
 .is-centered, .field.is-centered, .field.has-addons.is-centered {
 	justify-content: center;
 	display: flex;
+}
+
+.has-text-blue {
+	color: $blue;
+}
+
+.has-text-red {
+	color: $red;
+}
+
+.has-background-red {
+	background-color: $red;
+}
+.has-bt-blue {
+	border-top-color: $blue;
+}
+
+.has-bt-red {
+	border-top-color: $red;
+}
+
+.has-bt-white {
+	border-top-color: $white;
+}
+
+.side-heading {
+	border-top-width: 2px;
+	border-top-style: solid;
+	padding-top: 15px;
+	padding-left: 3px;
+	margin-right: 15px;
 }

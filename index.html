@@ -1,6 +1,5 @@
 ---
 layout: base
-title: site.title
 ---
 
 <section class="hero is-light is-medium">
@@ -14,16 +13,16 @@ title: site.title
 </section>
 
 <section class="section">
-
+	<div class="container">
 		<div class="columns">
 			<div class="column is-one-quarter">
 			</div>
 			<div class="column">
-				<h1 class="title is-2">In a nutshell, we help you accelerate your digital aspirations.</h1>
+				<h1 class="title is-2 has-text-blue">In a nutshell, we build reliable digital products</h1>
 				<div class="is-size-5">
-					We build and develop software products.
-We guide organisations on their digital transformation.
-We teach the skills needed for an internal digital capability.
+					We build products that are fast.
+					We design experience that is delightful.
+					We help users reflect on what they really need.
 				</div>
 				
 			</div>
@@ -32,54 +31,70 @@ We teach the skills needed for an internal digital capability.
 			<div class="column is-one-quarter">
 			</div>
 			<div class="column">
-				Learn More About Us
+				<div class="button">Learn More About Us</div>
 			</div>
 		</div>
+	</div>
+</section>
+<section class="section">
+	<div class="container">		
 	
 		<div class="columns">
 			<div class="column is-one-quarter">
-				Offerings
+				<div class="side-heading has-bt-red has-text-weight-bold is-size-5">Our Expertise</div>
 			</div>
 			<div class="column">
-				<h1 class="title is-3">Guide</h1>
+				<h1 class="title is-3 has-text-red">Edge</h1>
 				<div>
-					We bring together expertise across three areas that we see as key to making digital transformation happen: Digital and product management expertise, technology advice and design and implementation of the digital organisation.
+					We focus on delivering low latency and stable applications by making use of devices' computing and storage capability. Offloading workload to the edge reduces monthly cost of your cloud subscription. 
 				</div>
 			</div>
 			<div class="column">
-				<h1 class="title is-3">Build</h1>
+				<h1 class="title is-3 has-text-red">Ease</h1>
 				<div>
-					We build and develop software products.
-We guide organisations on their digital transformation.
-We teach the skills needed for an internal digital capability.
+					We bring expertise in developing consumer applications with millions of users to building user friendly and productive enterprise applications.
 				</div>
 			</div>
 			<div class="column">
-				<h1 class="title is-3">Teach</h1>
+				<h1 class="title is-3 has-text-red">Extra</h1>
 				<div>
-					We build and develop software products.
-We guide organisations on their digital transformation.
-We teach the skills needed for an internal digital capability.
+					We always go the extra mile to polish our product and make it delightful to use. And we listen deeply to discern what users really need. 
 				</div>
 			</div>
 		</div>
+		<div class="columns">
+			<div class="column is-one-quarter">
+			</div>
+			<div class="column">
+				<div class="button">Contact Us</div>
+			</div>
+		</div>
+		<!--
 		<div class="columns">
 			<div class="column is-one-quarter">
 			</div>
 			<div class="column">
 				View our products
 			</div>
-		</div>
+		</div>-->
 	</div>
 </section>
 
-<section class="hero is-light is-medium">
-  <div class="hero-body">
+<section class="section has-background-red is-small has-text-white">
+ 
     <div class="container">    	
-	      <div class="has-text-centered">
-		      Some pitching here
-	  	  </div>
-    </div>
+    	<div class="columns">
+    		<div class="column is-one-quarter">
+    			<div class="side-heading has-bt-white has-text-weight-bold is-size-5 has-text-white">Non-profit?</div>
+    		</div>
+    		<div class="column is-size-5">
+		      We offer free consulting session for non-profit organizations since we believe in doing greater good through digital transformation. Don't hesitate to <a href="">reach out</a> to us. 
+
+		      <div class="button">Contact Us</div>
+	  	  	</div>
+
+    	</div>
+
   </div>
 </section>
 
@@ -87,7 +102,7 @@ We teach the skills needed for an internal digital capability.
 	<div class="container">
 		<div class="columns">
 			<div class="column is-one-quarter">
-				Latest News
+				<div class="side-heading has-bt-blue has-text-weight-bold is-size-5">Latest News</div>
 			</div>
 			{% for post in site.posts limit:2 %}
 		    <div class="column">

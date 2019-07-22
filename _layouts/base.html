@@ -2,20 +2,25 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>{{ page.title }}</title>
+    <title>
+    	{{ page.title | default: site.title }}
+    </title>
     <link rel="stylesheet" href="/assets/css/styles.css">
   </head>
   <body style="min-height: 100vh;display: flex;flex-direction:column;justify-content: space-between;">
 	{% include nav.html %}
     {{ content }}
 
-    <footer class="footer">
-	  <div class="content has-text-centered">
-	    <p>
-	      <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
-	      <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
-	      is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
-	    </p>
+    <footer class="footer has-background-dark">
+	  <div class="columns">
+	    <div class="column is-one-quarter">
+	    </div>
+	    <div class="column has-text-white is-size-6">
+	    	<div>Contact</div>
+	    	<div>Privacy Policy</div>
+	    	<div>Terms of Use</div>
+	    	<div>Site Map</div>
+	    </div>
 	  </div>
 	</footer>
   </body>
