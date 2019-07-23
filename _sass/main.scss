@@ -47,6 +47,9 @@ $family-primary: $family-sans-serif;
 .has-background-red {
 	background-color: $red;
 }
+.has-background-blue {
+	background-color: $blue;
+}
 .has-bt-blue {
 	border-top-color: $blue;
 }
@@ -65,4 +68,10 @@ $family-primary: $family-sans-serif;
 	padding-top: 15px;
 	padding-left: 3px;
 	margin-right: 15px;
+}
+
+.landing-logo {
+	padding: 15px 25px;
+	font-size: 4.5rem;
+	border-radius: 15px;
 }
