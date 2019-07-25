@@ -50,6 +50,10 @@ $family-primary: $family-sans-serif;
 .has-background-blue {
 	background-color: $blue;
 }
+.has-background-pink {
+	background-color: #e47ead;
+}
+
 .has-bt-blue {
 	border-top-color: $blue;
 }
@@ -72,6 +76,66 @@ $family-primary: $family-sans-serif;
 
 .landing-logo {
 	padding: 15px 25px;
-	font-size: 4.5rem;
-	border-radius: 15px;
+	font-size: 3.1rem;
+	border-radius: 10px;
+}
+
+.logo {
+	padding: 5px 10px;
+	border-radius: 5px;
+}
+.pt-2 {
+	padding-top: 2rem;
+}
+.pt-1 {
+	padding-top: 1rem;
+}
+
+.blk {
+	display: block;
+}
+
+.button.is-blue {
+	color: $blue;
+	border-color: $blue;
+	&:hover {
+		border-color: $blue;
+	}
+	&.is-hovered {
+		border-color: $blue;
+	}
+}
+
+.button.is-red {
+	color: $red;
+	border-color: $red;
+	&:hover {
+		border-color: $red;
+	}
+	&.is-hovered {
+		border-color: $red;
+	}
+}
+
+.button.is-white {
+	color: $white;
+	background-color: transparent;
+	border-color: $white;
+	&:hover {
+		border-color: $white;
+	}
+	&.is-hovered {
+		border-color: $white;
+	}
+}
+
+.footer-menu {
+	margin-bottom: 10px;
+}
+a.plain {
+	color: inherit !important;
+	&:hover {
+		text-decoration: underline;
+		
+	}
 }
