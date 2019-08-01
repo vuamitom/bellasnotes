@@ -2,7 +2,6 @@
 layout: post
 title:  "Run Babel transpiler on React with Odoo's asset bundling"
 date:   2019-07-30 00:12:33 +0700
-categories: odoo
 tags: [odoo,babel,react]
 ---
 
@@ -98,4 +97,4 @@ class BabelJavascriptAsset(JavascriptAsset):
         return out.decode('utf8')
 ```
 
-After the above steps, you can use jsx with your Odoo asset bundle. 
+After the above steps, you can use jsx with your Odoo asset bundle. The complete code example can be found [here]()

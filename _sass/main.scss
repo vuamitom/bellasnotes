@@ -76,9 +76,13 @@ $family-primary: $family-sans-serif;
 }
 
 .landing-logo {
-	padding: 15px 25px;
 	font-size: 3.1rem;
-	border-radius: 10px;
+	display: inline-block;
+
+	background-color: #0175e1;
+	color: white;
+	border-radius: 50%;
+	padding: 84px 27px;
 }
 
 .logo {
@@ -146,4 +150,14 @@ a.plain {
 }
 .post-tag {
 	padding: 0px 10px;
+}
+
+.footer {
+	background-color: inherit;
+	padding: 0px;
+
+	& > .container {
+		border-top: 1px solid #e5e3dd;
+		padding-top: 12px;
+	}
 }

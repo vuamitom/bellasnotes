@@ -2,8 +2,7 @@
 layout: post
 title:  "Create a single page React app with Odoo custom module"
 date:   2019-07-31 00:16:33 +0700
-categories: odoo
-tags: [odoo,react,custom,addon]
+tags: [odoo,react]
 ---
 
 Odoo add-on allows very flexible customization. For most custom modules, adding an form view or table view to admin page is enough. However sometimes the custom module may need to create an entirely different UI layout (think Gantt chart, custom dashboard...). In this post, we are going through the steps required to add a non-standard interface to Odoo, a single page React based To-do app. The purpose is, in other words, to create a scaffold for standalone screen similar to that of the `point-of-sale` module. 
@@ -20,11 +19,16 @@ Firstly, let odoo knows the endpoint of main html page. Unlike regular Odoo modu
 ```python
 # -*- coding: utf-8 -*-
 from odoo import http
+from odoo.http import request
+import json
 
 class Todo(http.Controller):
     @http.route('/todo/todo/', auth='public')
     def index(self, **kw):
-        return "Hello, world"
+        context = {
+            'session_info': json.dumps(request.env['ir.http'].session_info())
+        }
+        return request.render('todo.index', qcontext=context)
 ```
 
 ### 2. Specify custom js and css
