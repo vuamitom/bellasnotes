@@ -18,16 +18,19 @@ email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
   Digial consultant with a focus on edge computing, rich client applications. 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
-
+url: "https://beolla.com" # the base hostname & protocol for your site, e.g. http://example.com
+# twitter_username: jekyllrb
+# github_username:  jekyll
+# show_excerpts: true
+# paginate: 10
 # Build settings
 markdown: kramdown
+permalink: /:title/
 # theme: minima
-# plugins:
-#  - jekyll-feed
-
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.

@@ -1,4 +1,39 @@
 ---
-layout: page
+layout: base
 ---
-{{content}}
+<article itemscope itemtype="http://schema.org/BlogPosting">
+
+
+	<section class="section">
+		<div class="container">
+			<div class="has-text-centered">
+				<h1 class="title is-1" itemprop="name headline">{{page.title | escape }}</h1>
+				<div class="has-text-grey">
+				  <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+			        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+			        {{ page.date | date: date_format }}
+			      	</time>
+			      {%- if page.author -%}
+			        • <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+			        	<span class="p-author h-card" itemprop="name">{{ page.author }}</span>
+			        </span>
+			      {%- endif -%}		      
+		      	</div>
+		      	{%- if page.tags -%}
+		      	<div class="is-size-7 has-text-grey pt-1">
+		      	{% assign tags = page.tags %}
+		      	{% for tag in tags %}
+		      		<span class="post-tag is-uppercase">{{tag}}</span>
+		      		{% unless forloop.last %} | {% endunless %}
+		      	{% endfor %}
+		      	</div>
+			    {%- endif -%}
+			</div>
+			<div class="content is-size-5 pt-2">
+			{{content}}
+			</div>
+		</div>
+	</section>
+
+	{% include disqus.html %}
+</article>

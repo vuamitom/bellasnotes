@@ -4,8 +4,9 @@ $black: rgb(112, 108, 100);
 $blue: #2897ff;
 $red: #ff323c;
 $dark: #323232;
-
-
+$fullhd-enabled: false;
+$size-7: 0.85rem;
+@import url('./tango.css');
 @import url('https://fonts.googleapis.com/css?family=Palanquin+Dark|Ubuntu&display=swap');
 $family-title-sans-serif: 'Palanquin Dark',Helvetica,Arial,sans-serif;
 $family-sans-serif: 'Ubuntu',Helvetica,Arial,sans-serif;
@@ -138,4 +139,11 @@ a.plain {
 		text-decoration: underline;
 		
 	}
+}
+
+.highlight {
+	margin-bottom: 1rem;
+}
+.post-tag {
+	padding: 0px 10px;
 }
