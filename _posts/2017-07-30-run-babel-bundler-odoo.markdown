@@ -97,4 +97,4 @@ class BabelJavascriptAsset(JavascriptAsset):
         return out.decode('utf8')
 ```
 
-After the above steps, you can use jsx with your Odoo asset bundle. The complete code example can be found [here]()
+After the above steps, you can use jsx with your Odoo asset bundle. The complete code example can be found [here](https://github.com/beolla/samples/tree/master/todo).
