@@ -161,3 +161,11 @@ a.plain {
 		padding-top: 12px;
 	}
 }
+.content {
+	& > p {
+		& > img {
+			margin: auto;
+			display: block;
+		}
+	}
+}
