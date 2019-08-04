@@ -7,11 +7,14 @@ tags: [odoo,react]
 
 Odoo add-on allows very flexible customization. For most custom modules, adding an form view or table view to admin page is enough. However sometimes the custom module may need to create an entirely different UI layout (think Gantt chart, custom dashboard...). In this post, we are going through the steps required to add a non-standard interface to Odoo, a single page React based To-do app. The purpose is, in other words, to create a scaffold for standalone screen similar to that of the `point-of-sale` module. 
 
+(Complete code sample for this post can be found [here](https://github.com/beolla/samples/tree/master/todo).)
+
 As usual, we start with an empty module scaffold:
 
 ```bash
 ./odoo-bin scaffold todo ~/src/odoo-addons/
 ```
+
 ### 1. Create controller routes.
 
 Firstly, let odoo knows the endpoint of main html page. Unlike regular Odoo module, our single page todo app resides in a separate url endpoint on its own. To add the route, open `controllers/controllers.py`:
