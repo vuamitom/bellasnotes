@@ -36,7 +36,7 @@ from odoo.addons.base.models.assetsbundle import AssetsBundle
 
 class AssetsBundleBabel(AssetsBundle):
 
-	def __init__(self, name, files, remains=None, env=None):
+    def __init__(self, name, files, remains=None, env=None):
         super(AssetsBundleBabel, self).__init__(name, files, remains=remains, env=env)
         for idx, js in enumerate(self.javascripts):
             if js.url.endswith('.jsx'):
@@ -97,4 +97,4 @@ class BabelJavascriptAsset(JavascriptAsset):
         return out.decode('utf8')
 ```
 
-After the above steps, you can use jsx with your Odoo asset bundle. The complete code example can be found [here](https://github.com/beolla/samples/tree/master/todo). Having a Babel bundler ready, we can move on to create a React based Odoo module, which is detailed in [this post](/create-react-ui-odoo/).
+After the above steps, you can use jsx with your Odoo asset bundle. The complete code example can be found [here](https://github.com/beolla/samples/tree/master/todo). Having a Babel bundler ready, we can move on to create a React based Odoo module, which is detailed in [this post](/create-react-ui-odoo/). One thing to note though, this method is working for bundled asset only. In asset debug mode, `to_node` method of BabelJavascriptAsset should be overridden as well. 

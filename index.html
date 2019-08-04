@@ -103,17 +103,24 @@ layout: base
 -->
 <section class="section">
 	<div class="container">
-		<div class="columns">
-			<div class="column is-one-quarter">
-				<div class="side-heading has-bt-blue has-text-weight-bold is-size-5">Latest News</div>
+		{% assign rows = site.posts.size | divided_by: 2.0 | ceil %}
+		{% for i in (1..rows) %}
+			{% assign offset = forloop.index0 | times: 2 %}
+			<div class="columns">
+				<div class="column is-one-quarter">
+					{% if forloop.first %}
+					<div class="side-heading has-bt-blue has-text-weight-bold is-size-5">Latest News</div>
+					{% endif %}
+				</div>
+				{% for post in site.posts limit:2 offset:offset%}
+			    <div class="column">
+			      <h2 class="title is-3"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+			      <div class="content">{{ post.excerpt }}</div>
+			    </div>
+				{% endfor %}
 			</div>
-			{% for post in site.posts limit:2 %}
-		    <div class="column">
-		      <h2 class="title is-3"><a href="{{ post.url }}">{{ post.title }}</a></h2>
-		      <div class="content">{{ post.excerpt }}</div>
-		    </div>
-			{% endfor %}
-		</div>
+		{% endfor %}
+
 		
 	</div>
 </section>

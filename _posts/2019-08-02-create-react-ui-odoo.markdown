@@ -35,7 +35,7 @@ Notice that `todo.index` is a template that specifies html content of the page. 
 ```xml
 <template id="index" name="todo index">&lt;!DOCTYPE html&gt;
 	<html>
-	        <head>
+	    <head>
 	        <title>Custom React Todo</title>
 	        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 	        <meta http-equiv="content-type" content="text/html, charset=utf-8" />               
@@ -66,8 +66,8 @@ Since the source code was in jsx, which is not supported out of the box by Odoo 
 
 Either way, once the javascript resource is included, we can checkout the result page at `/todo/todo`. 
 
-![](/content/images/react-odoo-todo-sample.png)
+![React based Todo module with Odoo](/content/images/react-odoo-todo-sample.png)
 
 ### 3. Future improvements
 
-Though we have created a React based Todo app, there are a few other things that can be done, such as saving the todo data to Odoo's backend. That would require setting up api endpoints, and authenticating service calls with Odoo. Odoo's web clients comes with `web.assets_backend` bundle to make api calls, but it is a little bit bloated. Next time we can look into way of making our own requests without using that huge bundle. 
+Though we have created a React based Todo app, there are a few other things that can be done, such as saving the todo data to Odoo's backend. That would require setting up api endpoints, and authenticating service calls with Odoo. Odoo's web clients comes with `web.assets_common.js` bundle to make api calls, but it is a little bit bloated. We can look into way of [making our own requests without using that huge bundle](/make-api-request-without-jquery-odoo/). 
