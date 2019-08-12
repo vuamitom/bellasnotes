@@ -123,3 +123,5 @@ Don't forget that Qweb templates need to be declared in `__manifest.py__` for Od
 And finally, here is our result:
 
 ![Odoo native view](/content/images/odoo-native-final.png)
+
+An example module is put together [here](https://github.com/beolla/samples/tree/master/preact_example), though Preact was used instead of React due to smaller file size. 
