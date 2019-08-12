@@ -40,9 +40,12 @@ Firstly, we let Odoo knows of the link by inserting a menu item record, and asso
 
 The above action `beolla_exam.exam` is defined in javascript source, which extends base `AbstractAction` and defines view initialization by overriding action hooks:
 
-**init**: initialize the action object. 
-**willStart**: called before **start**, often used to fetch data before rendering. It must return a promise. 
-**start**: is where rendering actually happens. 
++**init**: initialize the action object. 
+
++**willStart**: called before **start**, often used to fetch data before rendering. It must return a promise. 
+
++**start**: is where rendering actually happens. 
+
 
 ```javascript
 
